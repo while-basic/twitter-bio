@@ -30,10 +30,12 @@ const Home: NextPage = () => {
   };
 
   const prompt = `Generate 3 ${
+    
     vibe === 'Casual' ? 'relaxed' : vibe === 'Funny' ? 'silly' : 'Professional'
   } twitter biographies with no hashtags and clearly labeled "1.", "2.", and "3.". Only return these 3 twitter bios, nothing else. ${
-    vibe === 'Funny' ? 'Make the biographies humerous' : ''
-  }Make sure each generated biography is less than 300 characters, has short sentences that are found in Twitter bios, and feel free to use this context as well: ${bio}${
+    
+    vibe === 'Funny' ? 'Make the biographies humorous' : ''
+  } Make sure each generated biography is less than 300 characters, has short sentences that are found in Twitter bios, and feel free to use this context as well: ${bio}${
     bio.slice(-1) === '.' ? '' : '.'
   }`;
 
@@ -114,11 +116,11 @@ const Home: NextPage = () => {
 
       <Header />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-12 sm:mt-20">
-        <p className="border rounded-2xl py-1 px-4 text-slate-500 text-sm mb-5 hover:scale-105 transition duration-300 ease-in-out">
+        {/* <p className="border rounded-2xl py-1 px-4 text-slate-500 text-sm mb-5 hover:scale-105 transition duration-300 ease-in-out">
           <b>96,434</b> bios generated so far
-        </p>
+        </p> */}
         <h1 className="sm:text-6xl text-4xl max-w-[708px] font-bold text-slate-900">
-          Generate your next Twitter bio using AI
+          Generate your Twitter bio with AI
         </h1>
         <div className="mt-7">
           <Toggle isGPT={isGPT} setIsGPT={setIsGPT} />
